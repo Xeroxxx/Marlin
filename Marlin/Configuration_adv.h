@@ -2033,7 +2033,7 @@
  * Requires NOZZLE_PARK_FEATURE.
  * This feature is required for the default FILAMENT_RUNOUT_SCRIPT.
  */
-//#define ADVANCED_PAUSE_FEATURE
+#define ADVANCED_PAUSE_FEATURE
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define PAUSE_PARK_RETRACT_FEEDRATE         60  // (mm/s) Initial retract feedrate.
   #define PAUSE_PARK_RETRACT_LENGTH            2  // (mm) Initial retract.
@@ -2494,11 +2494,11 @@
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  8
-    #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  8
-    #define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
-    //#define Z_STALL_SENSITIVITY  8
+    //#define X_STALL_SENSITIVITY  8
+    //#define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
+    //#define Y_STALL_SENSITIVITY  8
+    //#define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
+    #define Z_STALL_SENSITIVITY  8
     //#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
     //#define Z3_STALL_SENSITIVITY Z_STALL_SENSITIVITY
     //#define Z4_STALL_SENSITIVITY Z_STALL_SENSITIVITY
@@ -2528,7 +2528,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
@@ -3367,7 +3367,7 @@
  * WiFi Support (Espressif ESP32 WiFi)
  */
 //#define WIFISUPPORT         // Marlin embedded WiFi managenent
-//#define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
+#define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
 
 #if EITHER(WIFISUPPORT, ESP3D_WIFISUPPORT)
   #define WEBSUPPORT          // Start a webserver (which may include auto-discovery)
@@ -3382,7 +3382,7 @@
    *   #define WIFI_SSID "WiFi SSID"
    *   #define WIFI_PWD  "WiFi Password"
    */
-  #include "Configuration_Secure.h" // External file with WiFi SSID / Password
+  #include "Configuration_secure.h" // External file with WiFi SSID / Password
 #endif
 
 /**
