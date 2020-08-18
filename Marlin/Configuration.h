@@ -494,9 +494,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // My Printer
-  #define DEFAULT_Kp 55.23
-  #define DEFAULT_Ki 10.70
-  #define DEFAULT_Kd 71.26
+  #define DEFAULT_Kp 30.68
+  #define DEFAULT_Ki 2.97
+  #define DEFAULT_Kd 79.16
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -550,9 +550,9 @@
   //#define DEFAULT_bedKd 305.4
 
   //My Bed
-  #define DEFAULT_bedKp 79.79
-  #define DEFAULT_bedKi 13.91
-  #define DEFAULT_bedKd 305.07
+  #define DEFAULT_bedKp 71.96
+  #define DEFAULT_bedKi 14.06
+  #define DEFAULT_bedKd 245.57
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -608,7 +608,7 @@
  */
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
-#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+//#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
 #define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
 
 //===========================================================================
@@ -1257,7 +1257,7 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
